@@ -1,0 +1,24 @@
+Resources:
+  SageMakerNotebookInstance:
+    Type: "AWS::SageMaker::NotebookInstance"
+    Properties:
+      InstanceType: ml.t2.medium
+      RoleArn: !GetAtt SageMakerNotebookInstanceRole.Arn
+      NotebookInstanceName: AWSRedisVSSSageMakerNotebook
+      DirectInternetAccess: Enabled
+      DefaultCodeRepository: https://github.com/seanbot2000/redis-vss-getting-started.git
+
+  SageMakerNotebookInstanceRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service:
+                - sagemaker.amazonaws.com
+            Action:
+              - "sts:AssumeRole"
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/AmazonSageMakerFullAccess"
