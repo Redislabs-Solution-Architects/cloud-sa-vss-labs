@@ -38,9 +38,7 @@ Select "Personal" for the account type and fill out the form.  Review and accept
 
 ![](images/05-signup.png)
 
-Enter a credit card.  Note that this card will only be charged if you exceed the credits provided for this lab.  Nothing we're doing in this lab would exceed those credits.  We're going to deploy the SageMaker cloud resources in this AWS account.  The IaaS charges for that will total a few dollars for the duration of the lab.  All the other resources we're using will be provisioned for you by Redis Inc.
-
-After you finishing working with all of the labs, you can follow the instructions in "Cleanup" lab to turn off the resources you deployed and still you'll be left with some credits in your account that you can use to get your hands more dirty on the AWS technologies.
+After you finishing working with all of the labs, you can follow the instructions in "Cleanup" lab to turn off the resources you deployed.
 
 ![](images/06-card.png)
 
